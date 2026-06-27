@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  background: #f6f7f7;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #f6f7f7;
+  color: #111819;
+}
+
+::selection {
+  background: #f2dfcd;
+  color: #111819;
+}
+
+@layer utilities {
+  .focus-ring {
+    @apply outline-none focus-visible:ring-2 focus-visible:ring-copper-500 focus-visible:ring-offset-2;
+  }
+
+  .prose-industrial {
+    @apply text-ink-700;
+  }
+
+  .prose-industrial h2 {
+    @apply mt-10 text-2xl font-bold text-ink-900;
+  }
+
+  .prose-industrial h3 {
+    @apply mt-8 text-xl font-bold text-ink-900;
+  }
+
+  .prose-industrial p {
+    @apply mt-4 leading-8;
+  }
+
+  .prose-industrial ul {
+    @apply mt-4 space-y-3;
+  }
+
+  .prose-industrial li {
+    @apply leading-8;
+  }
+
+  .prose-industrial strong {
+    @apply font-semibold text-ink-900;
+  }
+}

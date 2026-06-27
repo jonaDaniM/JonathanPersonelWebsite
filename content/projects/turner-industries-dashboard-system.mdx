@@ -1,0 +1,76 @@
+---
+title: "Turner Industries Dashboard System"
+slug: "turner-industries-dashboard-system"
+category: "Construction Operations / Data / Automation"
+summary: "Built web-based dashboards using Google Apps Script, HTML, and spreadsheet-backed data to improve visibility into material status, quantities, and field operations."
+featured: true
+tools:
+  - "Google Apps Script"
+  - "HTML"
+  - "JavaScript"
+  - "Spreadsheet-backed data"
+year: "Field Operations"
+confidentiality: true
+---
+
+<ConfidentialityCallout>
+  This case study uses a sanitized summary and recreated visuals. Proprietary
+  workbook IDs, internal URLs, client records, package numbers, source code, and
+  sensitive project details are excluded.
+</ConfidentialityCallout>
+
+## Problem
+
+Construction operations teams often depend on spreadsheets, field updates, package records, material status reports, and manual checks to understand what is ready, delayed, missing, or unclear. The challenge was not only displaying data. The harder problem was making recurring status work more reliable without forcing field and office teams into a heavy new system.
+
+The workflow needed a practical dashboard layer that could support thousands of package and material-related records while preserving user-entered fields that teams relied on during refreshes.
+
+## What I Built
+
+I built web-based dashboard and automation workflows using Google Apps Script, HTML, JavaScript, and spreadsheet-backed data. The system supported recurring reporting, package/material status review, static output generation, scheduled refreshes, protected user-entry fields, and audit logging.
+
+The public version of this case study intentionally describes the system at a safe level. It does not expose live dashboard links, workbook IDs, internal URLs, real package numbers, client-sensitive records, manager names, or proprietary source code.
+
+<MetricStrip
+  metricsText="2,300+|package records supported|Public-safe rounded figure.; 10-15 hrs|estimated weekly workload reduction per unit|Recurring reporting and status-check effort.; Thousands|of package/material-related records automated; Scheduled|refreshes with audit logging; Protected|user-entry fields preserved during refreshes"
+/>
+
+## Architecture
+
+The system was designed around a simple operating flow: source data came from workbook records, automation processed and refreshed outputs, static dashboard views made status easier to review, and audit logs helped confirm refresh behavior.
+
+<ArchitectureFlow
+  stepsText="Source workbook records|Automation layer|Static outputs|Web dashboard|Audit logs"
+/>
+
+Key design priorities included:
+
+- Keep the workflow close to existing spreadsheet-based operations.
+- Avoid exposing sensitive links, workbook IDs, package numbers, or client records.
+- Preserve protected user-entry fields during refreshes.
+- Generate repeatable static outputs for easier review.
+- Maintain scheduled refresh behavior and audit visibility.
+
+## Public-Safe Dashboard Preview
+
+<RedactedDashboardPreview />
+
+The preview above is recreated with fake sample data only. It is meant to show the shape of the work: status cards, package-level rows, refresh behavior, and field-execution visibility without exposing private project information.
+
+## Operational Impact
+
+The dashboard and automation work reduced repeated manual status-checking, supported large package/material datasets, and made recurring reporting easier to maintain. More importantly, it helped translate messy field and material data into a reviewable operating view.
+
+Safe public impact points:
+
+- Supported more than 2,300 package records.
+- Reduced estimated recurring reporting and status-check workload by 10-15 hours per week per unit.
+- Automated thousands of package/material-related records.
+- Used scheduled refreshes and audit logging.
+- Preserved protected user-entry fields during refreshes.
+
+## What This Proves
+
+This project shows that Jonathan can build practical systems inside messy, asset-heavy operations. The work combined field awareness, spreadsheet realities, dashboard design, automation logic, and software thinking to create a usable operating layer for construction teams.
+
+It also reinforces the broader portfolio theme: the best tools in construction are not abstract software demos. They are systems that respect how field operations actually run, protect sensitive information, reduce recurring manual work, and help managers see what needs attention.
