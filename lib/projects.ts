@@ -47,6 +47,7 @@ function assertProjectFrontmatter(
     featured: data.featured,
     tools,
     year: data.year as string,
+    location: typeof data.location === "string" ? data.location : undefined,
     confidentiality: data.confidentiality,
   };
 }

@@ -58,7 +58,7 @@ export default function HomePage() {
       <Section
         eyebrow="Selected work"
         title="Featured project case studies"
-        intro="Initial case studies are written as editable MDX files with placeholders for screenshots, exact metrics, and private details Jonathan can add later."
+        intro="Selected work showing how Jonathan applies field awareness, software thinking, project controls, and operator judgment to real operational problems."
         className="bg-white"
       >
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

@@ -1,6 +1,3 @@
-import fs from "node:fs";
-import path from "node:path";
-import Image from "next/image";
 import type { ReactNode } from "react";
 
 type MediaItem = {
@@ -15,43 +12,24 @@ type Metric = {
   note?: string;
 };
 
-function publicFileExists(src: string) {
-  if (!src.startsWith("/")) {
-    return false;
-  }
-
-  return fs.existsSync(path.join(process.cwd(), "public", src));
-}
-
 function MediaFrame({ item, label }: { item: MediaItem; label?: string }) {
-  const exists = publicFileExists(item.src);
-
   return (
     <figure className="overflow-hidden rounded-lg border border-ink-100 bg-white shadow-sm">
       <div className="relative flex aspect-[4/3] items-center justify-center bg-[linear-gradient(135deg,#eef2f4_0%,#f6f7f7_55%,#f2dfcd_100%)]">
-        {exists ? (
-          <Image
-            src={item.src}
-            alt={item.alt}
-            fill
-            sizes="(min-width: 768px) 50vw, 100vw"
-            className="object-cover"
-          />
-        ) : (
-          <div className="p-5 text-center">
-            {label ? (
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-copper-700">
-                {label}
-              </p>
-            ) : null}
-            <p className="mt-2 text-sm font-semibold text-ink-900">
-              Image placeholder
+        <div className="p-5 text-center">
+          {label ? (
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-copper-700">
+              {label}
             </p>
-            <p className="mt-2 break-all text-xs leading-5 text-ink-500">
-              {item.src}
-            </p>
-          </div>
-        )}
+          ) : null}
+          <p className="mt-2 text-sm font-semibold text-ink-900">
+            Image reserved for public-safe project media
+          </p>
+          <p className="mt-2 text-xs leading-5 text-ink-600">{item.alt}</p>
+          <p className="mt-3 break-all rounded-md bg-white/70 px-3 py-2 text-xs leading-5 text-ink-500">
+            {item.src}
+          </p>
+        </div>
       </div>
       {item.caption ? (
         <figcaption className="border-t border-ink-100 px-4 py-3 text-sm leading-6 text-ink-700">
@@ -231,10 +209,10 @@ export function MetricStrip({
 export function ConfidentialityCallout({ children }: { children: ReactNode }) {
   return (
     <aside className="my-8 rounded-lg border border-safety-100 bg-safety-100/45 p-5 text-sm leading-7 text-ink-700">
-      <p>
+      <div className="[&_p]:mt-0 [&_p]:inline">
         <strong className="font-semibold text-ink-900">Public-safe note:</strong>{" "}
         {children}
-      </p>
+      </div>
     </aside>
   );
 }

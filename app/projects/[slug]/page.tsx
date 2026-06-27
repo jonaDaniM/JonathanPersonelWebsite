@@ -49,6 +49,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
           <div className="flex flex-wrap gap-2">
             <Badge tone="copper">{project.category}</Badge>
             <Badge tone="steel">{project.year}</Badge>
+            {project.location ? <Badge>{project.location}</Badge> : null}
           </div>
           <h1 className="mt-6 text-4xl font-bold sm:text-5xl">
             {project.title}

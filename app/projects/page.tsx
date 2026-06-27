@@ -16,7 +16,7 @@ export default function ProjectsPage() {
     <Section
       eyebrow="Projects"
       title="Case studies grounded in operations"
-      intro="These case studies are intentionally structured around problems, constraints, approaches, and lessons learned. Private metrics and screenshots are left as placeholders until approved for public use."
+      intro="A practical look at construction operations, automation, enterprise systems, real estate execution, and field-informed problem solving."
       headingLevel="h1"
     >
       <div className="grid gap-6 md:grid-cols-2">

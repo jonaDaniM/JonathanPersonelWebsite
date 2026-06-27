@@ -50,6 +50,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       <div className="flex flex-wrap gap-2">
         <Badge tone="steel">{project.category}</Badge>
         <Badge>{project.year}</Badge>
+        {project.location ? <Badge>{project.location}</Badge> : null}
         {project.confidentiality ? (
           <Badge tone="copper">Confidential / Redacted</Badge>
         ) : null}
@@ -79,9 +80,12 @@ export function ProjectCard({ project }: ProjectCardProps) {
           </span>
         ))}
       </div>
-      <span className="mt-6 text-sm font-semibold text-copper-700 group-hover:text-copper-500">
+      <Link
+        href={`/projects/${project.slug}`}
+        className="focus-ring mt-6 w-fit rounded-sm text-sm font-semibold text-copper-700 group-hover:text-copper-500"
+      >
         Read case study
-      </span>
+      </Link>
     </article>
   );
 }

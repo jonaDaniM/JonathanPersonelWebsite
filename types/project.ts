@@ -6,6 +6,7 @@ export type ProjectFrontmatter = {
   featured: boolean;
   tools: string[];
   year: string;
+  location?: string;
   confidentiality: boolean;
 };
 
